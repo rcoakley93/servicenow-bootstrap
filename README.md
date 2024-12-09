@@ -6,7 +6,7 @@ This repository contains automation scripts and configuration files for deployin
 
 - `initial_setup.sh`: System preparation script
 - `servicenow_deploy.py`: Instance deployment automation
-- `my.cnf`: MariaDB configuration file
+- `servicenow_config.yaml`: Configuration settings
 
 ## Prerequisites
 
@@ -24,10 +24,10 @@ sudo chmod +x initial_setup.sh
 sudo ./initial_setup.sh
 ```
 
-2. Install MariaDB:
+2. Configure your instance:
 ```bash
-# Copy my.cnf to /glide/mysql/
-cp my.cnf /glide/mysql/
+# Modify servicenow_config.yaml with your settings
+vi servicenow_config.yaml
 ```
 
 3. Deploy ServiceNow instance:
@@ -44,11 +44,13 @@ sudo python3 servicenow_deploy.py \
 
 ## Configuration Details
 
-### MariaDB Settings
-- Optimized for ServiceNow workloads
-- Default buffer pool: 16GB (adjust based on available RAM)
-- UTF8MB4 character set
-- InnoDB file per table enabled
+### YAML Configuration
+- Instance settings
+- Database configuration
+- Java memory settings
+- System parameters
+- Monitoring options
+- Security settings
 
 ### ServiceNow Instance
 - Automated systemd service creation
