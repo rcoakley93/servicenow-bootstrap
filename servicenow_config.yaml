@@ -1,0 +1,51 @@
+---
+# ServiceNow Instance Configuration
+instance:
+  node_name: dev
+  port: 16000
+  proxy_host: https://example.service-now.com
+  proxy_path: /
+
+# Database Configuration
+database:
+  host: localhost
+  port: 3306
+  user: snc_user
+  rdbms: mysql
+
+# Java Settings
+java:
+  xms: 128m
+  xmx: 2048m
+  max_metaspace: 640m
+  max_direct_memory: 256m
+  code_cache: 240m
+
+# System Settings
+system:
+  swappiness: 1
+  process_limit: 10240
+  file_limit: 16000
+  locale: en_US.UTF-8
+  timezone: UTC
+
+# Monitoring Configuration
+monitor:
+  url: localhost
+  fast_stats: false
+  checkin_interval: 86400000
+  server_stats_interval: 86400000
+  fast_server_stats_interval: 86400000
+
+# Security Settings
+security:
+  selinux: permissive
+  ssl_enabled: true
+  ssl_protocols:
+    - TLSv1.2
+    - TLSv1.3
+  ssl_ciphers:
+    - TLS_AES_256_GCM_SHA384
+    - TLS_AES_128_GCM_SHA256
+    - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+    - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
