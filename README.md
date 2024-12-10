@@ -90,6 +90,3 @@ For issues or questions:
 - Review KB articles referenced in scripts
 - Submit issues via GitHub
 
-## License
-
-MIT License
